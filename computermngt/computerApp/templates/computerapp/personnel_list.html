@@ -7,15 +7,17 @@
         <td>Secu</td>
         <td>Nom</td>
         <td>prenom</td>
+        <td>Lieu</td>
         {% for personnel in personnels %}
         <tr>
             <td><a href="{% url 'personnel-detail' personnel.secu %}">{{personnel.secu }}</a></td> 
             <td>{{personnel.nom}}</td>
             <td>{{personnel.prenom}}</td>
+            <td>{{personnel.lieu}}</td>
         </tr>
         {% endfor %}
     </table>
     {% else %}
-        <p>Il n\'y a pas de machine.</p >
+        <p>Il n\'y a pas de personnel.</p >
     {% endif %}
 {% endblock %}
