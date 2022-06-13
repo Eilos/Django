@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <h1 style="text-align: center;">Liste des machines</h1>
+    {% if machines %}
+    <table class="table table-sm" border="1" cellpadding="5">
+        <td>Id</td>
+        <td>Nom</td>
+        {% for machine in machines %}
+        <tr>
+            <td><a href="{% url 'machine-detail' machine.id %}">{{ machine.id }}</a></td> 
+            <td>{{machine.nom}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+        <p>Il n\'y a pas de machine.</p >
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "index.html" %}
+
+{% block content %}
+<h1 style="margin-left: 30px;"> Lieu: {{ infras.lieu }} </h1>
+
+    <p style="margin-left: 30px;"><strong>Machines</strong> : {{ infras.machines }}</a></p>
+    <p style="margin-left: 30px;"><strong>Manager</strong > : {{ infras.manager }}</p>
+    <p style="margin-left: 30px;"><strong>Employées</strong> : {{ infras.employe }}</p>
+    <p style="margin-left: 30px;"><strong>Réseau</strong> : 172.23.16.0/24 avec un sous-réseau en /27, cette infrastructure utilise le routage inter-vlan qui comprend deux vlans</p>
+{% endblock %}
