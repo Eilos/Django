@@ -3,11 +3,11 @@
 {% block content %}
     <h1 style="text-align: center;">Liste du personnel</h1>
     {% if personnels %}
-    <table class="table table-sm" border="1" cellpadding="5">
-        <td>Secu</td>
-        <td>Nom</td>
-        <td>prenom</td>
-        <td>Lieu</td>
+    <table class="table table-primary" border="1" cellpadding="5">
+        <td style="width: 500px;">Secu</td>
+        <td style="width: 500px;">Nom</td>
+        <td style="width: 500px;">prenom</td>
+        <td style="width: 500px;">Lieu</td>
         {% for personnel in personnels %}
         <tr>
             <td><a href="{% url 'personnel-detail' personnel.secu %}">{{personnel.secu }}</a></td> 

@@ -9,9 +9,6 @@ def index(request):
     context = {}
     return render(request, 'index.html', context)
 
-def connexion(request):
-    context={}
-    return(request, 'connexion.html', context)
 
 def machine_list_view(request):
     machines = Machine.objects.all()

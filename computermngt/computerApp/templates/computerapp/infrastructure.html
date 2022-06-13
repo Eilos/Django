@@ -3,14 +3,14 @@
 {% block content %}
     <h1 style="text-align: center;">Liste des Infrastructures</h1>
     {% if infra %}
-    <table class="table table-sm" border="1" cellpadding="5">
+    <table class="table table-primary" border="1" cellpadding="5">
         <td>Lieu</td>
         <td>Machines</td>
         <td>Manager</td>
         <td>Employées</td>
         {% for infras in infra %}
             <tr>
-                <td><a href="{% url 'infra-detail' infras.lieu %}">{{ infras.lieu }}</a></td> 
+                <td><a href="{% url 'infra-detail' infras.lieu%}">{{ infras.lieu }}</a></td> 
                 <td>{{infras.machines}}</td>
                 <td>{{infras.manager}}</td>
                 <td>{{infras.employe}}</td>
